@@ -1,0 +1,51 @@
+name:                haskell-infinadd
+version:             0.1.0.0
+github:              "Arthi-chaud/haskell-infinadd"
+license:             BSD-3-Clause
+author:              "Arhti-chaud"
+maintainer:          "Arthi-chaud"
+copyright:           "2024 Arthi-chaud"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/Arthi-chaud/haskell-infinadd#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  haskell-infinadd-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-infinadd
+
+tests:
+  haskell-infinadd-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-infinadd
