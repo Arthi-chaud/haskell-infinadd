@@ -24,16 +24,22 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      InfinAdd.Parser.Expression
+      InfinAdd.Parser.Parser
   other-modules:
       Paths_haskell_infinadd
   autogen-modules:
       Paths_haskell_infinadd
   hs-source-dirs:
       src
+  default-extensions:
+      OverloadedStrings
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , megaparsec
+    , parser-combinators
+    , text
   default-language: Haskell2010
 
 executable haskell-infinadd-exe
@@ -44,6 +50,8 @@ executable haskell-infinadd-exe
       Paths_haskell_infinadd
   hs-source-dirs:
       app
+  default-extensions:
+      OverloadedStrings
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
@@ -54,13 +62,18 @@ test-suite haskell-infinadd-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      InfinAdd.Parser.ParserTest
       Paths_haskell_infinadd
   autogen-modules:
       Paths_haskell_infinadd
   hs-source-dirs:
       test
+  default-extensions:
+      OverloadedStrings
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , haskell-infinadd
+    , hspec
+    , text
   default-language: Haskell2010
