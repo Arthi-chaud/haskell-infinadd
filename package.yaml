@@ -14,6 +14,9 @@ description:         Please see the README on GitHub at <https://github.com/Arth
 dependencies:
 - base >= 4.7 && < 5
 
+default-extensions:
+- OverloadedStrings
+
 ghc-options:
 - -Wall
 - -Wcompat
@@ -27,7 +30,10 @@ ghc-options:
 
 library:
   source-dirs: src
-
+  dependencies:
+    - megaparsec
+    - text
+    - parser-combinators
 executables:
   haskell-infinadd-exe:
     main:                Main.hs
@@ -38,7 +44,6 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - haskell-infinadd
-
 tests:
   haskell-infinadd-test:
     main:                Spec.hs
@@ -49,3 +54,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - haskell-infinadd
+    - hspec
+    - text
