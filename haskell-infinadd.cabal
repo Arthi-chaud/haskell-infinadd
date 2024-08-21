@@ -24,6 +24,9 @@ source-repository head
 
 library
   exposed-modules:
+      InfinAdd.EDSL.Backends.Native
+      InfinAdd.EDSL.EDSL
+      InfinAdd.EDSL.Runner
       InfinAdd.Parser.Expression
       InfinAdd.Parser.Parser
   other-modules:
@@ -34,9 +37,11 @@ library
       src
   default-extensions:
       OverloadedStrings
+      DeriveFunctor
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , free
     , megaparsec
     , parser-combinators
     , text
@@ -52,6 +57,7 @@ executable haskell-infinadd-exe
       app
   default-extensions:
       OverloadedStrings
+      DeriveFunctor
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
@@ -70,6 +76,7 @@ test-suite haskell-infinadd-test
       test
   default-extensions:
       OverloadedStrings
+      DeriveFunctor
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5

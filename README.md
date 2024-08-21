@@ -9,3 +9,6 @@ Examples will be available at a later date…
 ## Sources
 
 - Mark Karpov's [extensive tutorial for Megaparsec](https://markkarpov.com/tutorial/megaparsec.html)
+- Serokell's [article on Free monads](https://serokell.io/blog/introduction-to-free-monads)
+- Nokomprendo's [articles on Free monads](https://nokomprendo.gitlab.io/posts/tuto_084/2022-03-10-fr-README.html)
+
