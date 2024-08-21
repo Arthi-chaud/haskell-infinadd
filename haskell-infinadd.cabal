@@ -68,6 +68,7 @@ test-suite haskell-infinadd-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      InfinAdd.EDSL.Backends.NativeTest
       InfinAdd.Parser.ParserTest
       Paths_haskell_infinadd
   autogen-modules:
