@@ -24,9 +24,12 @@ source-repository head
 
 library
   exposed-modules:
+      InfinAdd
+      InfinAdd.EDSL
       InfinAdd.EDSL.Backends.Native
       InfinAdd.EDSL.EDSL
       InfinAdd.EDSL.Runner
+      InfinAdd.Parser
       InfinAdd.Parser.Expression
       InfinAdd.Parser.Parser
   other-modules:
@@ -62,6 +65,7 @@ executable haskell-infinadd-exe
   build-depends:
       base >=4.7 && <5
     , haskell-infinadd
+    , text
   default-language: Haskell2010
 
 test-suite haskell-infinadd-test
