@@ -46,6 +46,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - haskell-infinadd
+    - text
 tests:
   haskell-infinadd-test:
     main:                Spec.hs
