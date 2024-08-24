@@ -1,4 +1,4 @@
-module InfinAdd.Parser.Parser where
+module InfinAdd.Parser.Parser (InfinAdd.Parser.Parser.parse) where
 
 import Control.Monad.Combinators.Expr (Operator (InfixL, Prefix), makeExprParser)
 import Data.Text
