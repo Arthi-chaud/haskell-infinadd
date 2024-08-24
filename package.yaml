@@ -36,6 +36,10 @@ library:
     - text
     - parser-combinators
     - free
+  include-dirs: 
+    - src/InfinAdd/EDSL/Backends
+  c-sources:
+    - src/InfinAdd/EDSL/Backends/infinadd.c
 executables:
   haskell-infinadd-exe:
     main:                Main.hs
