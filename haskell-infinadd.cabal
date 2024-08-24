@@ -26,6 +26,7 @@ library
   exposed-modules:
       InfinAdd
       InfinAdd.EDSL
+      InfinAdd.EDSL.Backends.C
       InfinAdd.EDSL.Backends.Native
       InfinAdd.EDSL.EDSL
       InfinAdd.EDSL.Runner
