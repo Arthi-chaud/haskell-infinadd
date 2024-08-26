@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stdlib.h>
+
 /**
  * Computes the estimated size of the buffer
  * that would receive the result of adding a and b
