@@ -8,7 +8,7 @@ import InfinAdd.EDSL.EDSL (InfinAddF (Add, Sub))
 
 foreign import ccall "get_addition_max_len" getAddLen :: CString -> CString -> IO CSize
 
-foreign import ccall "get_substration_max_len" getSubLen :: CString -> CString -> IO CSize
+foreign import ccall "get_substraction_max_len" getSubLen :: CString -> CString -> IO CSize
 
 foreign import ccall "add" add :: CString -> CString -> CString -> IO CString
 
