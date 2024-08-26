@@ -1,6 +1,5 @@
 module InfinAdd.EDSL.Backends.NativeTest (specs) where
 
-import Data.Functor.Identity (Identity)
 import InfinAdd.EDSL.EDSL (InfinAdd, add, substract)
 import InfinAdd.EDSL.Runner (InfinAddBackend (Native), run)
 import Test.Hspec
@@ -14,4 +13,4 @@ specs = describe "Native Backend" $ do
         substract two 3
 
 test :: InfinAdd Integer -> Integer -> Expectation
-test a n = run Native a `shouldBe` (return n :: Identity Integer)
+test a n = run Native a >>= (`shouldBe` n)
