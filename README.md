@@ -51,4 +51,4 @@ The parsing of string expressions (using [`parse`](https://arthi-chaud.github.io
 
 ---
 
-[![Haddock](https://img.shields.io/badge/Documentation-Haddock-purple)](https://arthi-chaud.github.io/haskell-infinadd)
+[![Haddock](https://img.shields.io/badge/Documentation-Haddock-purple)](https://arthi-chaud.github.io/haskell-infinadd) [![codecov](https://codecov.io/gh/Arthi-chaud/haskell-infinadd/graph/badge.svg?token=4MW939PPE6)](https://codecov.io/gh/Arthi-chaud/haskell-infinadd)
