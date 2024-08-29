@@ -3,6 +3,7 @@ module Main (main) where
 import Control.Monad (when)
 import Data.Text (pack)
 import InfinAdd
+import InfinAdd.Parser
 import System.Exit (exitSuccess)
 import System.IO (hFlush, isEOF, stdout)
 

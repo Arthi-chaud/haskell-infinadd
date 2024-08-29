@@ -1,8 +1,8 @@
 module InfinAdd.EDSL.Backends.CTest (specs) where
 
 import Data.Text (Text)
-import InfinAdd (parse, toEDSL)
-import InfinAdd.EDSL.Runner (InfinAddBackend (C), run)
+import InfinAdd
+import InfinAdd.Parser
 import Test.Hspec
 import Text.Printf (perror, printf)
 

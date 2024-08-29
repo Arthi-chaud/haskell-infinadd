@@ -1,7 +1,6 @@
 module InfinAdd.EDSL.Backends.NativeTest (specs) where
 
-import InfinAdd.EDSL.EDSL (InfinAdd, add, substract)
-import InfinAdd.EDSL.Runner (InfinAddBackend (Native), run)
+import InfinAdd
 import Test.Hspec
 
 specs :: Spec
