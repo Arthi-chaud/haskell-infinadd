@@ -1,8 +1,8 @@
 # haskell-infinadd
 
-`haskell-infinadd` is a Haskell library and executable which allow you to add numbers without having to worry about bounds! Just like with `Integer`!
+`haskell-infinadd` is a Haskell library and executable that allow you to add numbers without having to worry about bounds! Just like with `Integer`!
 
-Why though? If the feature already exists, why should we reinvent the wheel? Well, sometimes, it's more about the journey than the destination! The goal of this project is to learn how to use `megaparsec`, the C FFI and Embedded Domain Specific Languages.
+Why though? If the feature already exists, why should we reinvent the wheel? Well, sometimes, it's more about the journey than the destination! The goal of this project is to learn how to use `megaparsec`, the C FFI and learn about Embedded Domain Specific Languages (EDSL) design.
 
 ## Examples
 
@@ -24,7 +24,7 @@ main = do
 
 ## How it works
 
-Our EDSL takes the form of an `InfinAdd a` operation. It is a monad, parameterised by the return type of the operation. (`a` should be `Integer` most of the time). To run the operation, we have the [`run`](https://arthi-chaud.github.io/haskell-infinadd/InfinAdd.html#v:run) function.
+Our EDSL takes the form of an `InfinAdd a` operation. It is a monad, parameterised by the return type of the operation. (most of the time , `a` should be `Integer`). To run the operation, we use the [`run`](https://arthi-chaud.github.io/haskell-infinadd/InfinAdd.html#v:run) function.
 
 ### Backends
 
