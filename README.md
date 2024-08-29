@@ -12,11 +12,11 @@ import InfinAdd
 main :: IO ()
 main = do
     -- You can use `parse`
-    res1 <- parse "(1 + 1) - 10) + (-3)" >>= (run C . toEDSL)
+    res1 <- parse "((1 + 1) - 10) + (-3)" >>= (run C . toEDSL)
     -- Or use EDSL terms
     res2 <- run C $ do
         a <- add 1 1
-        b <- substract a 10
+        b <- sub a 10
         add b (-3)
     print res1
     print res2
@@ -28,7 +28,7 @@ Our EDSL takes the form of an `InfinAdd a` operation. It is a monad, parameteris
 
 ### Backends
 
-A backend provides a way to interpret and execute the commands (`add`, `substract`). Two backends have been implemented for this EDSL:
+A backend provides a way to interpret and execute the commands (`add`, `sub`). Two backends have been implemented for this EDSL:
 
 - C. It uses Haskell's FFI to call C functions, which take the two operands as strings (`char *`). These C functions fill a buffer with the result of the addition/subtraction, as a string.
 - Haskell. It is really simple as it only consists of calling (+) and (-). It only exists as a proof that the EDSL can be interpreted in multiple ways.

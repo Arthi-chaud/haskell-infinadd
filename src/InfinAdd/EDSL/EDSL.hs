@@ -1,4 +1,4 @@
-module InfinAdd.EDSL.EDSL (add, substract, InfinAdd, InfinAddF (..)) where
+module InfinAdd.EDSL.EDSL (add, sub, InfinAdd, InfinAddF (..)) where
 
 import Control.Monad.Free (Free, liftF)
 
@@ -12,5 +12,5 @@ type InfinAdd = Free InfinAddF
 add :: Integer -> Integer -> InfinAdd Integer
 add a b = liftF $ Add a b id
 
-substract :: Integer -> Integer -> InfinAdd Integer
-substract a b = liftF $ Sub a b id
+sub :: Integer -> Integer -> InfinAdd Integer
+sub a b = liftF $ Sub a b id

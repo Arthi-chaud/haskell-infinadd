@@ -1,3 +1,3 @@
-module InfinAdd (InfinAdd, add, substract, run, InfinAddBackend (..)) where
+module InfinAdd (InfinAdd, add, sub, run, InfinAddBackend (..)) where
 
 import InfinAdd.EDSL

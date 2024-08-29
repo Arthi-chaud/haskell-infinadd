@@ -1,6 +1,6 @@
 module InfinAdd.Parser.Expression (Expression (..), toEDSL) where
 
-import InfinAdd.EDSL.EDSL (InfinAdd, add, substract)
+import InfinAdd.EDSL.EDSL (InfinAdd, add, sub)
 
 data Expression
     = Value Integer
@@ -21,4 +21,4 @@ toEDSL (Add ea eb) = do
 toEDSL (Sub ea eb) = do
     a <- toEDSL ea
     b <- toEDSL eb
-    substract a b
+    sub a b
