@@ -45,6 +45,10 @@ The parsing of string expressions (using [`parse`](https://arthi-chaud.github.io
 - Serokell's [article on Free monads](https://serokell.io/blog/introduction-to-free-monads)
 - Nokomprendo's [articles on Free monads](https://nokomprendo.gitlab.io/posts/tuto_084/2022-03-10-fr-README.html)
 
+## History
+
+`infinadd` used to be an Epitech project for first-year students. It would serve as a base for a bigger project named *bistro-matic*. The goal was to parse and handle simple mathematical expressions (addition, substractions, multiplication and division) of very big numbers (possibly larger than an `int`).
+
 ---
 
 [![Haddock](https://img.shields.io/badge/Documentation-Haddock-purple)](https://arthi-chaud.github.io/haskell-infinadd)
