@@ -1,8 +1,8 @@
 module InfinAdd.Parser.ParserTest (specs) where
 
 import Data.Text
-import InfinAdd.Parser.Expression (Expression (Add, Negate, Sub, Value))
-import InfinAdd.Parser.Parser
+import InfinAdd.Parser
+import InfinAdd.Parser.Expression
 import Test.Hspec
 
 specs :: Spec
@@ -21,5 +21,5 @@ specs =
             "1 + (2 - 3)"
             (Add (Value 1) (Sub (Value 2) (Value 3)))
 
-test :: Text -> Expression -> Spec
+test :: Text -> Expression -> SpecWith ()
 test str expr = it (unpack str) $ parse str `shouldBe` Right expr

@@ -25,15 +25,15 @@ source-repository head
 library
   exposed-modules:
       InfinAdd
+      InfinAdd.Parser
+      InfinAdd.Parser.Expression
       InfinAdd.EDSL
+  other-modules:
       InfinAdd.EDSL.Backends.C
       InfinAdd.EDSL.Backends.Native
       InfinAdd.EDSL.EDSL
       InfinAdd.EDSL.Runner
-      InfinAdd.Parser
-      InfinAdd.Parser.Expression
       InfinAdd.Parser.Parser
-  other-modules:
       Paths_haskell_infinadd
   autogen-modules:
       Paths_haskell_infinadd

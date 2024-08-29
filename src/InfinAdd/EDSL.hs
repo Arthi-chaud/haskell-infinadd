@@ -1,4 +1,4 @@
-module InfinAdd.EDSL (InfinAdd, run, InfinAddBackend (..)) where
+module InfinAdd.EDSL (add, substract, InfinAdd, run, InfinAddBackend (..)) where
 
 import InfinAdd.EDSL.EDSL
 import InfinAdd.EDSL.Runner
