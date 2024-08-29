@@ -30,7 +30,7 @@ Our EDSL takes the form of an `InfinAdd a` operation. It is a monad, parameteris
 
 A backend provides a way to interpret and execute the commands (`add`, `substract`). Two backends have been implemented for this EDSL:
 
-- C. It uses Haskell's FFI to call C functions, which take the two operands as strings (`char *`). These C functions fill a buffer with the result of the addition/substraction, as a string.
+- C. It uses Haskell's FFI to call C functions, which take the two operands as strings (`char *`). These C functions fill a buffer with the result of the addition/subtraction, as a string.
 - Haskell. It is really simple as it only consists of calling (+) and (-). It only exists as a proof that the EDSL can be interpreted in multiple ways.
 
 To choose which backend to use with `run`, you must use an [`InfinAddBackend`](https://arthi-chaud.github.io/haskell-infinadd/InfinAdd.html#t:InfinAddBackend) value, depending on your needs.
@@ -47,7 +47,7 @@ The parsing of string expressions (using [`parse`](https://arthi-chaud.github.io
 
 ## History
 
-`infinadd` used to be an Epitech project for first-year students. It would serve as a base for a bigger project named *bistro-matic*. The goal was to parse and handle simple mathematical expressions (addition, substractions, multiplication and division) of very big numbers (possibly larger than an `int`).
+`infinadd` used to be an Epitech project for first-year students. It would serve as a base for a bigger project named *bistro-matic*. The goal was to parse and handle simple mathematical expressions (addition, subtraction, multiplication and division) of very big numbers (possibly larger than an `int`).
 
 ---
 
