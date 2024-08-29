@@ -70,9 +70,9 @@ char *sub(char *dest, const char *a, const char *b) {
   if (b_is_neg) {
     return add(dest, a, &b[1]);
   }
-  // In the case where -a - b  <=> -(a-b)
+  // In the case where -a - b  <=> -(a+b)
   if (a_is_neg) {
-    dest = sub(dest, absolute_a, b);
+    dest = add(dest, absolute_a, b);
     return get_opposite(dest);
   }
   // if we would have a negative number
